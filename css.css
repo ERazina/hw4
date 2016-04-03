@@ -37,3 +37,18 @@ button{
     margin-left: 35px;
     margin-top: 10px;
 }
+
+#save{
+    width: 90px;
+    height: 30px;
+    margin-left: 19%;
+    margin-top: 10px;
+    margin-right: 50px;
+    
+}
+
+a{
+    width: 800px;
+    margin: 150px;
+    text-align: left;
+}
