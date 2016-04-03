@@ -1,0 +1,39 @@
+body{
+    background-color: bisque;
+    width: 800px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    color: #c20000;
+}
+
+h2{
+    text-align: center;
+    color: #c20000;   
+}
+
+#filename{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#buttons{
+    height: 50px;
+    background-color: #c20000;
+    width: 500px;
+    margin-left: 19%;
+}
+
+textarea{
+    width: 500px;
+    margin-left: 19%;
+    
+}
+button{
+    width: 90px;
+    height: 30px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
