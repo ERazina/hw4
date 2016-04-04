@@ -5,7 +5,7 @@
 	echo "<ol>";
 	foreach ($dir as $file) {
 		if (!($file == '.' || $file == '..')) {
-			echo "<li><a href='show_file.php?file=$file'>$file</a></li>";
+			echo "<li><a href='show_file.php?file=$file'>$file</a><a href = 'edit.php?file=$file' >Редактировать</a></li><";
 		}
 	}
 	echo "</ol>";
@@ -13,5 +13,8 @@
 		$file = $_GET['file'];
 		$text = preg_replace('/\[([^\[\]]*)\]/', "<$1>", file_get_contents("file/$file"));
 		echo $text;
+        echo "<a href = 'edit.php'>Редактировать</a>";
 	}
 ?>
+
+

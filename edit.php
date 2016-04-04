@@ -1,6 +1,5 @@
 <head>
 <link rel = "stylesheet" href="css.css" />
-<script type="text/javascript" src="jquery.js"></script>
     
 <script>
 function insertTag(text, tagStart, tagEnd) { 
@@ -33,23 +32,22 @@ function insertTag(text, tagStart, tagEnd) {
         <input type="button" value="i" onclick="insertTag('text','[i]','[/i]')"> 
         <input type="button" value="u" onclick="insertTag('text','[u]','[/u]')"><br> 
     </div>
-    <textarea rows="25" cols="100" name="text" id="textarea"></textarea></br>
+    <textarea rows="25" cols="100" name="text" id="textarea">
+        <?php
+        if(isset($_GET['file'])){
+            $name = $_GET['file'];
+            $edit = file_get_contents("file/$name");
+            echo $edit;
+        }
+
+	
+?>
+    </textarea></br>
     <input type="submit" value="Сохранить">
 
 
     <a href="show_file.php">Список статей</a>
 </form>
 
-<?php
-	if (!empty($_POST)) {
-		$name = $_POST['name'];
-		$text = htmlentities($_POST['text']);
-		
-		$fp = fopen("file/$name.txt", 'w');
-		fwrite($fp, $text, mb_strlen($text, 'UTF8'));
-		fclose($fp);
-        
-        
-	}
-?>
+
 </body>
