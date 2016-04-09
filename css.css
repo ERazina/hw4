@@ -28,6 +28,7 @@ h2{
 textarea{
     width: 500px;
     margin-left: 19%;
+    font-size: 15px;
     
 }
 button{
@@ -51,4 +52,24 @@ a{
     width: 800px;
     margin: 150px;
     text-align: left;
+}
+
+ol{
+border: 1px sodid black;
+}
+
+.button{
+    height: 30px;
+    width: 200px;
+    margin-left: 300px;
+    margin-top: 20px;
+    font-size: 15px;
+    background-color: #c20000;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+#link{
+    text-align: center;
+    margin-left: 350px;
 }

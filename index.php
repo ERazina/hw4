@@ -1,4 +1,6 @@
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <link rel = "stylesheet" href="css.css" />
 <script type="text/javascript" src="jquery.js"></script>
     
@@ -33,14 +35,16 @@ function insertTag(text, tagStart, tagEnd) {
         <input type="button" value="i" onclick="insertTag('text','[i]','[/i]')"> 
         <input type="button" value="u" onclick="insertTag('text','[u]','[/u]')"><br> 
     </div>
-    <textarea rows="25" cols="100" name="text" id="textarea"></textarea></br>
-    <input type="submit" value="Сохранить">
+    <textarea rows="15" cols="100" name="text" id="textarea"></textarea></br>
+    <input type="submit" value="Сохранить" class = "button"></br>
 
 
-    <a href="show_file.php">Список статей</a>
+    <a href="show_file.php" id = "link">Список файлов</a>
 </form>
 
 <?php
+header("Content-Type: text/html; charset=utf-8");
+
 	if (!empty($_POST)) {
 		$name = $_POST['name'];
 		$text = htmlentities($_POST['text']);
